@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    background-color: black;
+}
+/*NAVIGATION BAR*/
+.navbar{
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar_link, .home_link, .contact_link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
+    left: calc(100vw - 630px);
+    padding-left: 10px;
+    
+}
+
+.navbar_link:hover, .home_link:hover, .contact_link:hover{
+    color: #ff0844;
+    transform: scale(1.1);
+}
+
+.name{
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 44px;
+    position: relative;
+    top: 10%;
+    margin-left: 40px;
+}
+/*END OF NAVIGATION BAR*/
+
+/*MAIN DIV*/
+.main_div{
+    background-color: #ffb199;
+    width: 500px;
+    position: relative;
+    left: calc(100vw - 800px);
+    margin-top: 90px;
+    top: 11px;
+    height: 700px;
+    z-index: 4;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+}
+
+.sec_div{
+    background-color: #ff0844;
+    width: 500px;
+    position: relative;
+    left: calc(70vw - 800px);
+    margin-top: 90px;
+    bottom: 750px;
+    height: 670px;
+}
+
+.main_div_name{
+    background-color: #ff0844;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.hello{
+    font-size: xx-large;
+    background-color: #ff0844;
+    padding-left: 20px;
+}
+
+/*END OF MAIN DIVS AND SECOND DIVS*/
+
+/*START OF PROJECT DIV*/
+#proj_div{
+    background-color: #ffffff;
+    position: absolute;
+    top: 1200px;
+    width: 99vw;
+    height: 900px;
+    overflow: hidden;
+}
+
+#pre_btn, #next_btn{
+    background-color: #ff0844;
+    height: 905px;
+    font-size: 80px;
+    border-radius: 20px;
+    transform: translate();
+    transition: transform 0.3s ease-in-out;
+    z-index: 3;
+    visibility: hidden;
+
+}
+
+#test_pre_btn, #test_next_btn{
+    background-color: #ff0844;
+    border-radius: 90px;
+}
+
+#test_next_btn{
+    display: flex;
+    position: relative;
+    float: right;
+
+}
+
+
+#pre_btn:hover, #next_btn:hover{
+    background-color: #ff0844;
+    transform: scale(1.2);
+}
+
+
+#slide_img1, #slide_img2,  #slide_img3, #slide_img4, #slide_img5, #slide_img6{
+    position: absolute;
+    /*left: calc(100vw - 1300px);*/
+    left: 500px;
+    width: 700px;
+    height: auto;
+    border: 5px solid rgb(0, 0, 0);
+    top: 200px;
+    transition: all .5s ease;
+    z-index: 2;
+
+}
+
+/*END OF PROJECT DIV*/
+
+/*START OF CONTACT DIV*/
+
+#contact_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    position: relative;
+    top: 700px;
+}
+
+.email_p, .number_p, .insta_p, .discord_p, .message_p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.fa-envelope, .fa-phone, .fa-instagram, .fa-discord {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+/*END OF CONTACT DIV*/

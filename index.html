@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXT Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+
+
+    <nav id="navbar_placeholder">
+        <nav class="navbar">
+            <span class="name">Challa Hadley</span>
+            <a class="home_link" href="index.html">Home</a>
+            <a class="navbar_link" href="#proj_div">Work</a>
+            <a class="contact_link" href="">Contact</a>
+        </nav>
+    </nav>
+
+    <div class="main_div">
+        <h2 class="intro">Hello, My name is Challa Hadley</h2>
+    </div>
+    <div class="sec_div">
+        <h2 class="hello">Hello, &#x1F44B; <br> my name is</h2>
+        <h1 class="main_div_name">Challa <br>Hadley</h1>
+    </div>
+    
+    <div id="proj_div">
+        
+
+        <button id="test_pre_btn">&#x21D0;</button>
+        <button id="test_next_btn">&#x21D2;</button>
+        
+        
+        <img id="slide_img1" src="img1.png" alt="">
+        <img id="slide_img2" src="dog2.jfif" alt="">
+        <img id="slide_img3" src="dog3.jfif" alt="">
+        <img id="slide_img4" src="dog4.jfif" alt="">
+        <img id="slide_img5" src="dog5.jfif" alt="">
+        <img id="slide_img6" src="dog.jfif" alt="">
+    </div>
+
+
+    <div id="contact_div">
+        <br>
+        <p class="email_p"><i class="fas fa-envelope"></i> 1challahadley@gmail.com</p>
+        <p class="number_p"><i class="fas fa-phone"></i> (669)-207-6938</p>
+        <p class="insta_p"><i class="fab fa-instagram"></i> 1challahadley@gmail.com</p>
+        <p class="discord_p"><i class="fab fa-discord"></i> challa#6090</p>
+        <p class="message_p">Feel free to contact me through any of these platforms :)</p>
+        
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".navbar_link").click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#proj_div").offset().top
+                }, 1000);
+            });
+
+            $(".contact_link").click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#contact_div").offset().top
+                }, 1000);
+            });
+
+            
+            /*THIS IS THE FIRST EFFECT*/
+
+             // hide all the slide images initially
+            $("#slide_img, #slide_img1, #slide_img2, #slide_img3, #slide_img4, #slide_img5").hide();
+
+            // show the first slide image
+            $("#slide_img").show();
+
+            let currentSlide = 1;
+
+            $("#test_next_btn").click(function(){
+                $("#slide_img6").hide();
+                $("#slide_img" + currentSlide).hide();
+                currentSlide++;
+                if (currentSlide > 6) {
+                    currentSlide = 1;
+                }
+                $("#slide_img" + currentSlide).show();
+            });
+
+            $("#test_pre_btn").click(function(){
+                $("#slide_img" + currentSlide).hide();
+                currentSlide--;
+                if (currentSlide < 1) {
+                    currentSlide = 5;
+                }
+                $("#slide_img" + currentSlide).show();
+            });  
+
+
+        });
+        
+        </script>
+</body>
+</html>

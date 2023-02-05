@@ -19,6 +19,15 @@
             <a class="navbar_link" href="#proj_div">Work</a>
             <a class="contact_link" href="">Contact</a>
         </nav>
+
+        <button id="burger">&#x2630;</button>
+
+        <div id="smsc_navbar">
+            
+            <a class="smsc_home_link" href="index.html">Home</a>
+            <a class="smsc_navbar_link" href="#proj_div">Work</a>
+            <a class="smsc_contact_link" href="">Contact</a>
+        </div>
     </nav>
 
     <div class="main_div">
@@ -30,11 +39,8 @@
     </div>
     
     <div id="proj_div">
-        
-
         <button id="test_pre_btn">&#x21D0;</button>
         <button id="test_next_btn">&#x21D2;</button>
-        
         
         <img id="slide_img1" src="img1.png" alt="">
         <img id="slide_img2" src="dog2.jfif" alt="">
@@ -57,6 +63,21 @@
 
     <script>
         $(document).ready(function(){
+            $(".smsc_navbar_link").click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#proj_div").offset().top
+                }, 1000);
+            });
+
+            $(".smsc_contact_link").click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#contact_div").offset().top
+                }, 1000);
+            });
+
+            /*SMALL SCREEN PHONE WINDOW*/
             $(".navbar_link").click(function(event) {
                 event.preventDefault();
                 $('html, body').animate({
@@ -100,10 +121,33 @@
                 }
                 $("#slide_img" + currentSlide).show();
             });  
+            
+            const burger_button = document.getElementById("burger");
+            const phone_menu = document.getElementById("smsc_navbar");
+            let down = false;
 
+            
+            burger_button.addEventListener("click", function(){
+                if(down == false)
+                {
+                    phone_menu.style.bottom = "0px";
+                    /*go up if you want it to go up*/
+                    down = true;
+                }
+                else{
+                    phone_menu.style.bottom = "170px";
+                    down = false;
+                }
+            });
+            
 
+            /*
+            $(burger_button).click(function(){
+                $("#smsc_navbar").toggle();
+            })*/
+            /*phone_menu.style.bottom = parseInt(phone_menu.style.bottom) + 40 + "px";*/
         });
         
-        </script>
+    </script>
 </body>
 </html>

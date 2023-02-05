@@ -94,7 +94,8 @@
 
 @media screen and (max-width: 870px) {
     .smsc_navbar_link, .smsc_home_link, .smsc_contact_link{
-        float: left;
+        left: 20px;
+        padding-left: 10px;
         
     }
 

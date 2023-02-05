@@ -16,6 +16,7 @@
     position: relative;
     left: calc(100vw - 630px);
     padding-left: 10px;
+    top: 5px;
     
 }
 
@@ -35,6 +36,59 @@
     position: relative;
     top: 10%;
     margin-left: 40px;
+}
+
+
+/*SMALL SCREEN NAVIGATIONAL BAR*/
+#smsc_navbar{
+    background-color:rgba(255, 255, 255, 0.626);
+    height: 100px;
+    position: relative;
+    bottom:170px;
+    transition: bottom 1.5s ease, transform 0.3s ease-in-out;
+    display: none;
+}
+
+.smsc_navbar_link, .smsc_home_link, .smsc_contact_link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: calc(100vw - 550px);
+    padding-left: 40px;
+    top: 30px;
+    
+}
+
+#burger{
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    bottom: 55px;
+    display: none;
+}
+
+
+/*SMALL SCREEN NAVIGATIONAL BAR*/
+
+
+@media screen and (max-width: 670px) {
+    .navbar_link, .home_link, .contact_link{
+        display: none;
+    }
+
+    #burger, #smsc_navbar{
+        display: block;
+    }
+
 }
 /*END OF NAVIGATION BAR*/
 

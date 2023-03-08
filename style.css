@@ -45,7 +45,7 @@ span{
     padding: 10px;
     border-radius: 20px;
     position: absolute;
-    bottom: 750px;
+    bottom: 850px;
     z-index: 2;
     display: flex; /* Add this rule */
     flex-direction: column; /* Add this rule */

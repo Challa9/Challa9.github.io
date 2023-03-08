@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(193, 229, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container{
+    text-align: center;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px black solid;
+}
+
+.info{
+    border: 2px black solid;
+    background-color: white;
+    
+}
+
+#google_link{
+    text-decoration: none;
+    background-color: rgb(241, 152, 19);
+    font-size: 20px;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#search{
+    background-color: rgb(124, 192, 243);
+    border: 2px black solid;
+    width: 350px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 750px;
+    z-index: 2;
+    display: flex; /* Add this rule */
+    flex-direction: column; /* Add this rule */
+    align-items: center; /* Add this rule */
+}
